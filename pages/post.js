@@ -12,7 +12,10 @@ const PostContainer = ({ blog }) => {
           <meta name="twitter:site" content="@yoursite" />
           <meta name="twitter:title" content={blog.title} />
           <meta name="twitter:description" content={blog.body} />
-          <meta name="twitter:image" content="/header.png" />
+          <meta
+            name="twitter:image"
+            content="https://nextjs-playground-zeta.vercel.app/header.png"
+          />
         </Head>
         <h1>{blog.title}</h1>
         <p>{blog.body}</p>

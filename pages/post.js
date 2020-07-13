@@ -12,10 +12,7 @@ const PostContainer = ({ blog }) => {
           <meta name="twitter:site" content="@yoursite" />
           <meta name="twitter:title" content={blog.title} />
           <meta name="twitter:description" content={blog.body} />
-          <meta
-            name="twitter:image"
-            content="https://where-your-image-is-hosted/name.jpg"
-          />
+          <meta name="twitter:image" content="/header.png" />
         </Head>
         <h1>{blog.title}</h1>
         <p>{blog.body}</p>
@@ -30,16 +27,19 @@ export default function FirstPost({ data }) {
   return (
     <>
       <Head>
-        <title>First Post FTW</title>
+        <title>{blog.title}</title>
       </Head>
-      <h1>First Post</h1>
+      <br />
+      <img
+        src="/header.png"
+        alt="Vercel Logo"
+        className="logo"
+        style={{ width: "400px" }}
+      />
+      <PostContainer blog={blog} />
       <Link href="/">
         <a>Go Back</a>
       </Link>
-      <br />
-      <br />
-      <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-      <PostContainer blog={blog} />
     </>
   );
 }
